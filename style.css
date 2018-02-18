@@ -1,10 +1,10 @@
 /*
 Theme Name: Versluis 2013
-Theme URI: http://www.versluis.com
+Theme URI: https://github.com/versluis/Versluis-TwentyThirteen
 Author: Jay Versluis
 Author URI: http://wpguru.co.uk
 Description: Child Theme for TwentyThirteen
-Version: 1.5
+Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentythirteen
@@ -13,6 +13,9 @@ Template: twentythirteen
 /*
 CHANGELOG
 =========
+
+v1.6 - 28/04/2016
+added top padding to H3 Headlines
 
 v1.5 - 09/01/2015
 added .brush file extensions to MIME types
@@ -25,7 +28,7 @@ added App Icon (Stripes), loaded in footer.php
 must be added to the root directory as apple-touch-icon.png and apple-touch-icon-precomposed.png
 
 v1.2 - 15/12/2013
-added gorgeous new font Lato - inspired by TwentyFourteed
+added gorgeous new font Lato - inspired by TwentyFourteen
 
 v1.1 - 06/11/2013
 TwentyThirteen 1.1 compatibility fix:
@@ -75,7 +78,7 @@ h2.site-description {
  /* make captions smaller */
  .wp-caption .wp-caption-text {
 	 font-size: 1.0em;
-	 background-color:#f7f7f7;
+	 background-color:#ddd;
 	 padding: 10px;
 	 
 	 -webkit-border-bottom-right-radius: 10px;
@@ -84,4 +87,9 @@ h2.site-description {
 	 -moz-border-radius-bottomleft: 10px;
 	 border-bottom-right-radius: 10px;
 	 border-bottom-left-radius: 10px;
+ }
+
+ /* add top padding to H3 Headlines */
+ h3 {
+     margin-top: 40px !important;
  }
