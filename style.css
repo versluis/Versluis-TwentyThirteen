@@ -1,0 +1,87 @@
+/*
+Theme Name: Versluis 2013
+Theme URI: http://www.versluis.com
+Author: Jay Versluis
+Author URI: http://wpguru.co.uk
+Description: Child Theme for TwentyThirteen
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: twentythirteen
+*/
+
+/*
+CHANGELOG
+=========
+
+v1.5 - 09/01/2015
+added .brush file extensions to MIME types
+
+v1.4 - 14/04/2014
+captions are now smaller (and not frigging larger than the actual text in a post)
+
+v1.3 - 20/12/2013
+added App Icon (Stripes), loaded in footer.php
+must be added to the root directory as apple-touch-icon.png and apple-touch-icon-precomposed.png
+
+v1.2 - 15/12/2013
+added gorgeous new font Lato - inspired by TwentyFourteed
+
+v1.1 - 06/11/2013
+TwentyThirteen 1.1 compatibility fix:
+added new code priority to remove existing header images (12 instead of 11)
+thanks to Gavin for this fix: http://wpguru.co.uk/2013/10/how-to-use-your-own-random-header-images-in-twentythirteen/
+
+v1.0 - October 2013
+initial release
+
+*/
+
+@import url("../twentythirteen/style.css");
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+/* new font for 2014: Lato */
+html,
+button,
+input,
+select,
+textarea,
+h1.entry-title,
+h2.site-description {
+	font-family: Lato, Helvetica, sans-serif;
+}
+
+/* we need white titles with a fuzzy glow
+   See http://www.w3.org/Style/Examples/007/text-shadow.en.html */
+.site-title, .site-description {
+	color: #FFF;
+	text-shadow: 0 0 0.5em #000, 0 0 0.2em #000, 0 0 0.2em #fff, 0 0 0.2em #fff;
+}
+.site-header .site-title:hover {
+	text-decoration:none;
+}
+
+/* Old Typewriter for my headline
+ * http://www.dafont.com/old-typewriter.font */
+ @font-face {
+	 font-family:"CustomFont";
+	 src:url(Old-Typewriter.ttf)
+ }
+ .site-title {
+	 font-family:"CustomFont";
+	 text-transform:uppercase;
+ }
+ 
+ /* make captions smaller */
+ .wp-caption .wp-caption-text {
+	 font-size: 1.0em;
+	 background-color:#f7f7f7;
+	 padding: 10px;
+	 
+	 -webkit-border-bottom-right-radius: 10px;
+	 -webkit-border-bottom-left-radius: 10px;
+	 -moz-border-radius-bottomright: 10px;
+	 -moz-border-radius-bottomleft: 10px;
+	 border-bottom-right-radius: 10px;
+	 border-bottom-left-radius: 10px;
+ }
