@@ -152,3 +152,41 @@ $existing_mimes['brush'] = 'text/plain';
 return $existing_mimes;
 }
 add_filter('upload_mimes', 'allow_brush_file_uploads');
+
+// output some text as part of the header
+// for example, add advertising
+function writeSomeText () {
+	// echo "Hello from my new header function.";
+	$words = howManyWords();
+	echo "Total words on the site: $words";
+}
+add_action('wp_head', 'writeSomeText');
+
+// find out how many words in all posts
+function howManyWords () {
+	
+// define a variable
+$totalWords = 0;
+
+// grab all published posts
+$query = new WP_Query( array( 'post_status' => 'publish' ) );
+
+// loop through all published posts
+if ($query -> have_posts()) {
+	while ($query->have_posts()) {
+		$query->the_post();
+		
+		// remove HTML tags, leaving plain words
+		$text = trim (strip_tags(get_the_content()));
+		
+        // count spaces in each post
+		$wordCount = substr_count("$text ", ' ');
+		
+		// and add them to our totalWords variable
+		$totalWords = $totalWords + $wordCount;
+	}
+}
+
+// return the total word count
+return $totalWords;
+}
