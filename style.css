@@ -1,10 +1,10 @@
 /*
 Theme Name: Versluis 2013
-Theme URI: http://www.versluis.com
+Theme URI: https://github.com/versluis/Versluis-TwentyThirteen
 Author: Jay Versluis
-Author URI: http://wpguru.co.uk
+Author URI: https://wpguru.co.uk
 Description: Child Theme for TwentyThirteen
-Version: 1.7
+Version: 1.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentythirteen
@@ -13,6 +13,10 @@ Template: twentythirteen
 /*
 CHANGELOG
 =========
+
+v1.8 - September 2018
+file maintenance (fonts, removed test files)
+
 
 v1.7 - 28/08/2018
 added Google Analytics support
@@ -75,7 +79,7 @@ h1.site-title, .site-description {
  * http://www.dafont.com/old-typewriter.font */
  @font-face {
 	 font-family:"CustomFont";
-	 src:url(Old-Typewriter.ttf)
+	 src:url(fonts/Old-Typewriter.ttf)
  }
  .site-title {
 	 font-family:"CustomFont";
