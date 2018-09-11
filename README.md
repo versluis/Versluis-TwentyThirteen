@@ -6,7 +6,7 @@ Child Theme for my personal website at https://www.versluis.com, based on Automa
 
 # Features
 
-* 12 header images, changing randomly
+* 21 different header images, changing randomly
 * custom glowing font in the header
 * auomatically adds the Apple Podcast Badge underneath posts in Podcast Categories (adjustable in /includes/podcast-badge.php)
 * no JetPack upsell message in Admin Intrerface
