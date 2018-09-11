@@ -81,8 +81,8 @@ h1.site-title, .site-description {
 	 font-family:"CustomFont";
 	 src:url(fonts/Old-Typewriter.ttf)
  }
- .site-title {
-	 font-family:"CustomFont";
+h1.site-title {
+	 font-family:"CustomFont" !important;
 	 text-transform:uppercase;
  }
  
