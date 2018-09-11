@@ -2,9 +2,9 @@
 
 Child Theme for my personal website at https://www.versluis.com, based on Automattic's TwentyThirteen theme.
 
-![](screenshot.jpg)
+![](/screenshot.jpg)
 
-### Features
+# Features
 
 * 12 header images, changing randomly (I've explained how to do that here: https://wpguru.co.uk/2013/10/how-to-use-your-own-random-header-images-in-twentythirteen/)
 * custom glowing font in the header
