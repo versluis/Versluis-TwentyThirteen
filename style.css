@@ -2,9 +2,9 @@
 Theme Name: Versluis 2013
 Theme URI: https://github.com/versluis/Versluis-TwentyThirteen
 Author: Jay Versluis
-Author URI: http://wpguru.co.uk
+Author URI: https://wpguru.co.uk
 Description: Child Theme for TwentyThirteen
-Version: 1.7
+Version: 1.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentythirteen
@@ -14,9 +14,17 @@ Template: twentythirteen
 CHANGELOG
 =========
 
-v1.7 - February 2018
-added page templates for a Table of Contents
-removed JetPack upsell nags
+v1.8 - September 2018
+file maintenance (fonts, removed test files)
+added Apple Podcast Badge and iTunes links to Podcast Categories
+
+v1.7 - 28/08/2018
+added Google Analytics support
+created header.php file
+split p margins to better acoomodtae Google Auto Ads
+implemented Google Audo Ads
+integrated Word Count functions
+updated Table of Contents with word counts
 
 v1.6 - 28/04/2016
 added top padding to H3 Headlines
@@ -53,14 +61,13 @@ button,
 input,
 select,
 textarea,
-h1.entry-title,
 h2.site-description {
 	font-family: Lato, Helvetica, sans-serif;
 }
 
 /* we need white titles with a fuzzy glow
    See http://www.w3.org/Style/Examples/007/text-shadow.en.html */
-.site-title, .site-description {
+h1.site-title, .site-description {
 	color: #FFF;
 	text-shadow: 0 0 0.5em #000, 0 0 0.2em #000, 0 0 0.2em #fff, 0 0 0.2em #fff;
 }
@@ -72,7 +79,7 @@ h2.site-description {
  * http://www.dafont.com/old-typewriter.font */
  @font-face {
 	 font-family:"CustomFont";
-	 src:url(Old-Typewriter.ttf)
+	 src:url(fonts/Old-Typewriter.ttf)
  }
  .site-title {
 	 font-family:"CustomFont";
@@ -97,3 +104,22 @@ h2.site-description {
  h3 {
      margin-top: 40px !important;
  }
+
+/* Post Titles should not get the Lato treatment */
+h1 {
+	font-family: Bitter, Georgia, serif !important;
+}
+
+/* split p margins between top and bottom */
+p {
+	margin-top: 12;
+	margin-bottom: 12;
+}
+
+/* style Apple Podcasts Badge */
+#apple-badge {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 12px;
+}
