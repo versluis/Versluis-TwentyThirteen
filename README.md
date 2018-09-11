@@ -2,7 +2,7 @@
 
 Child Theme for my personal website at https://www.versluis.com, based on Automattic's TwentyThirteen theme.
 
-![](https://github.com/versluis/Versluis-TwentyThirdeen/screenshot.jpg)
+![](https://github.com/versluis/Versluis-TwentyThirteen/screenshot.jpg)
 
 # Features
 
