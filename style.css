@@ -18,6 +18,7 @@ v1.8 - September 2018
 file maintenance (fonts, removed test files)
 added Apple Podcast Badge and iTunes links to Podcast Categories
 added Stitcher Badge and links to Podcast Categories
+added YouTube Badge to DAZ Studio category
 
 v1.7 - 28/08/2018
 added Google Analytics support
@@ -134,5 +135,16 @@ p {
     margin-right: auto;
 	margin-top: -10px;
 	width: 200px;
+	height: auto;
+}
+
+/* style YouTube Badge */
+#youtube-badge {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 12px;
+	width: 260px;
 	height: auto;
 }
