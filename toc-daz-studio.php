@@ -10,7 +10,7 @@
  * @subpackage Twenty_Thirteen
  * @since Twenty Thirteen 1.0
  
-  Template Name: 3D Articles
+  Template Name: TOC - DAZ Studio Articles
  
  */
 
@@ -37,19 +37,14 @@ get_header(); ?>
 						<?php // the_content(); ?>
                         
 <?php 
-//
-// show a list of 3D articles by tag
+
+// grab all articles with tag
 // https://codex.wordpress.org/Class_Reference/WP_Query
-
-// count all 3D articles
-$query = new WP_Query( array( 'category_name' => '3D', 'nopaging' => true ) );
+$query = new WP_Query( array( 'tag' => 'daz-studio', 'nopaging' => true ) );
 $results = $query->found_posts;
-echo "<p>So far I've written $results 3D Articles for this site. Here's a list of each one, grouped together by software:</p>";
+echo "<p>So far I've written <strong>$results articles</strong> about DAZ Studio for this site.<br>Here's a list of each and every one of them:</p>";
 
-// list all DAZ Studio Articles
-echo "<h3>DAZ Studio</h3>";
-$query = new WP_Query( array( 'tag' => '3D', 'nopaging' => true ) );
-$results = $query->found_posts;
+// list those articles
 if ($query->have_posts() ) {
 	echo "";
 	while ($query->have_posts() ) {
@@ -57,8 +52,7 @@ if ($query->have_posts() ) {
 		echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
 	}
 	echo "";
-}
-// end of screencasts
+} // end of category articles list
 
 
 
