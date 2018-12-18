@@ -43,3 +43,14 @@ function guru_getWordCountCommentsCurrentUser() {
 	}
 	return $count;
 }
+
+/* remove JetPack upsell messages */
+/* https://mattreport.com/disable-jetpack-upsell-ads/ */
+add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
+
+// add Amazon oneLink shenanigans
+function guru_amazonOneLink() {
+	$oneLink = '<div id="amzn-assoc-ad-5e4fb363-4081-411a-8049-667d48d2b006"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=5e4fb363-4081-411a-8049-667d48d2b006"></script>';
+	echo $oneLink;
+}
+add_action ('wp_footer', 'guru_amazonOneLink');
