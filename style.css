@@ -4,7 +4,7 @@ Theme URI: https://github.com/versluis/Versluis-TwentyThirteen
 Author: Jay Versluis
 Author URI: https://wpguru.co.uk
 Description: Child Theme for TwentyThirteen
-Version: 1.8
+Version: 1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentythirteen
@@ -13,6 +13,9 @@ Template: twentythirteen
 /*
 CHANGELOG
 =========
+
+v1.9 - December 2018
+added Amazon OneLink code to footer
 
 v1.8 - September 2018
 file maintenance (fonts, removed test files)
