@@ -45,9 +45,15 @@ function versluis2013_add_badge ($content){
 		// it's not a Podcast
 		$after = '';	
 	}
-
-	$content = $content . $after;
-	return $content;
+	
+	// depending on where we are, print the podcast icons
+	// since @2.0
+	
+	if (is_single()) {
+		return $content . $after;
+	} else {
+		return $content;
+	}
 }
 add_filter ('the_content', 'versluis2013_add_badge');
 
