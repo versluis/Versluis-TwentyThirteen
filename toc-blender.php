@@ -40,11 +40,29 @@ get_header(); ?>
 //
 // show a list of articles by tag
 // https://codex.wordpress.org/Class_Reference/WP_Query
+// 
 
-// grab all articles with tag
+echo "<p>Over the years I've written many artcles about Blender. I decided to start a new tag with Blender 2.8, becasue some principles and the interface have so drastically changed.<br>";
+						
+// grab all articles with tag Blender (2.8)
 $query = new WP_Query( array( 'tag' => 'blender', 'nopaging' => true ) );
 $results = $query->found_posts;
-echo "<p>So far I've written <strong>$results articles</strong> about DAZ Studio for this site.<br>Here's a list of each and every one of them:</p>";
+echo "<p>So far I've written <strong>$results articles</strong> about Blender 2.8 and above.<br>Here's a list of each and every one of them:</p>";
+
+// list all articles
+if ($query->have_posts() ) {
+	echo "";
+	while ($query->have_posts() ) {
+		$query->the_post();
+		echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+	}
+	echo "<br><hr>";
+} // end of category articles list
+						
+// grab all articles with tag Blender 2.79
+$query = new WP_Query( array( 'tag' => 'blender279', 'nopaging' => true ) );
+$results = $query->found_posts;
+echo "<p>I've also written <strong>$results articles</strong> about Blender 2.79 and below, from before the great interface re-design of 2019. Here's a complete list of them:</p>";
 
 // list all articles
 if ($query->have_posts() ) {
