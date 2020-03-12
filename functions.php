@@ -5,11 +5,16 @@
 include 'includes/headers.php';
 include 'includes/podcast-badge.php';
 
-
-// enable .brush file uploads
-// since @1.5
+// enable additional file formats in Media Uploads
+// adds: .brush .zip .blend 
+// since @2.2
 function allow_brush_file_uploads ( $existing_mimes=array() ) {
+	
 	$existing_mimes['brush'] = 'text/plain'; 
+	$existing_mimes['zip'] = 'application/zip';
+    $existing_mimes['gz'] = 'application/x-gzip';
+	$existing_mimes['blend'] = 'application/blender';
+	
 	return $existing_mimes;
 }
 add_filter('upload_mimes', 'allow_brush_file_uploads');
@@ -66,7 +71,7 @@ function showDiviBanner () {
 	$divi = '<a href="https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=6674_5_1_20" target="_blank" rel="nofollow"><img style="border:0px" src="https://www.elegantthemes.com/affiliates/media/banners/divi_728x90.jpg" width="728" height="90" alt="Divi WordPress Theme"></a>';
 	$banner = '<div align="center">' . $divi . '</div>';
 	
-	// if we're logged in, or if this is the donations /hire me page, 
+    // if we're logged in, or if this is the donations /hire me page, 
 	// or if this is the home page, or if we're mobile,
 	// do not show the banner
 	if (is_user_logged_in()) return;
@@ -78,4 +83,4 @@ function showDiviBanner () {
 	// print the banner
 	echo $banner;
 }
-add_action ('get_header', 'showDiviBanner');
+// add_action ('get_header', 'showDiviBanner');
