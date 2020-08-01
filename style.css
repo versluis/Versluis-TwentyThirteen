@@ -18,6 +18,7 @@ CHANGELOG
 added Unreal Engine archive page
 added expanded Patreon support seciton in top sidebar widget
 re-ordered Table of Contents pages in main menu
+indented unordered lists to be inline with text
 
 2.2 - March 2020
 added .zip and .blend files as MIME Types
@@ -168,4 +169,9 @@ p {
 	margin-bottom: 12px;
 	width: 260px;
 	height: auto;
+}
+
+/* indent bullet points to be inline with text */
+.entry-content li {
+	margin-left: 20px;
 }
