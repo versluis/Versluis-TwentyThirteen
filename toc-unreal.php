@@ -42,7 +42,7 @@ get_header(); ?>
 // https://codex.wordpress.org/Class_Reference/WP_Query
 // 
 						
-// grab all articles with tag UNreal Engine
+// grab all articles with tag Unreal Engine
 $query = new WP_Query( array( 'tag' => 'unreal', 'nopaging' => true ) );
 $results = $query->found_posts;
 echo "<p>So far I've written <strong>$results articles</strong> about Unreal Engine 4.<br>Here's a list of each and every one of them:</p>";
