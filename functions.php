@@ -11,6 +11,7 @@ include plugin_dir_path (__FILE__) . 'includes/wordcount.php';
 include plugin_dir_path (__FILE__) . 'includes/mime-types.php';
 include plugin_dir_path (__FILE__) . 'includes/ads.php';
 include plugin_dir_path (__FILE__) . 'includes/roles.php';
+include plugin_dir_path (__FILE__) . 'includes/ad-free.php';
 
 //
 // remove JetPack upsell messages 
